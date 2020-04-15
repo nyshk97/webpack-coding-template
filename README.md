@@ -33,7 +33,7 @@ Output with basic style
 ```
 $ npm build:dev
 ```
-or Output with one line
+or Output with a single line
 ```
 $ npm build
 ```
