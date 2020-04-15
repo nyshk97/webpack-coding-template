@@ -1,3 +1,15 @@
+## This Contains
+- Development server
+- Hot reload
+- Compiling Sass
+- Compiling Pug
+- Compressing images
+- Attaching hash to CSS, JavaScript, and images (to prevent cache from remaining in the browser)
+- Minifying CSS
+- Minifying JavaScript
+- Minifying HTML
+- HTML, CSS descriptions that I use frequently
+
 ## Required
 - npm
 - git
@@ -11,7 +23,7 @@ $ cd your-project-name
 $ npm i
 ```
 
-## Start development server
+## Run development server
 ```
 $ npm start
 ```
