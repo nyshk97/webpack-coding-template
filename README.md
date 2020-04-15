@@ -4,6 +4,7 @@
 - Compiling Sass
 - Compiling Pug
 - Compressing images
+- Attaching vender prefixes
 - Attaching hash to CSS, JavaScript, and images (to prevent cache from remaining in the browser)
 - Minifying CSS
 - Minifying JavaScript
