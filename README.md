@@ -2,7 +2,7 @@
 - npm
 
 ## Get Started
-replace `your-project-name` with any name
+Replace `your-project-name` with any name
 ```
 $ git clone https://github.com/nyshk97/webpack-coding-template.git
 $ mv webpack-coding-template your-project-name
