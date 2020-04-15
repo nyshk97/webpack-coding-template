@@ -29,7 +29,7 @@ $ npm start
 ```
 
 ## Build
-Output with basic style
+Output with the basic style
 ```
 $ npm build:dev
 ```
