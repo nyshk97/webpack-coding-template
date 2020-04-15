@@ -1,5 +1,6 @@
 ## Required
 - npm
+- git
 
 ## Get Started
 Replace `your-project-name` with any name
