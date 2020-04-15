@@ -1,0 +1,10 @@
+.btn-outline {
+  @extend %btn;
+  background: transparent;
+  border: solid 1px $grey1;
+  color: $grey1;
+  box-shadow: none;
+  &:hover {
+    box-shadow: none;
+  }
+}

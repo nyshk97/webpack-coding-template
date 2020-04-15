@@ -1,0 +1,167 @@
+.form {
+  line-height: 1.5;
+  max-width: 600px;
+  margin: auto;
+  &__group {
+    //項目名とinput等の1つのかたまり
+    margin-bottom: 16px;
+    margin-bottom: 1.6rem;
+    label {
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    &.inline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      label {
+        width: 150px;
+        margin-right: 16px;
+      }
+      @include sp {
+        display: block;
+        label {
+          display: block;
+          width: 100%;
+          margin-bottom: 4px;
+        }
+      }
+    }
+    &.-last {
+      margin-bottom: 24px;
+    }
+    &.-submit {
+      text-align: center;
+    }
+    &.-mb {
+      margin-bottom: 24px;
+    }
+  }
+  &__name {
+    //項目名
+    font-size: inherit;
+    display: block;
+  }
+  &__txt {
+    //input[type="text"], input[type="textarea"]など
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    color: #495057;
+    display: block;
+    height: 38px;
+    height: calc(1.5em + 1.2rem + 2px);
+    padding: 6px 12px;
+    padding: 0.6rem 1.2rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    width: 100%;
+    font-size: 1.6rem;
+    &::placeholder {
+      color: $grey2;
+    }
+    &:focus {
+      outline: 0;
+      border-color: #80bdff;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+  }
+  &__radio {
+    //radio button
+    display: none;
+    &:checked + label:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      width: 12px;
+      height: 12px;
+      background: $main;
+      border-radius: 50%;
+    }
+    & + label {
+      display: inline-block;
+      padding-left: 25px;
+      position: relative;
+      margin-right: 15px;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: 1px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #999;
+        border-radius: 50%;
+      }
+    }
+  }
+  &__check {
+    display: none;
+    & + label {
+      padding-left: 20px;
+      position: relative;
+      display: block;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: -6px;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #999;
+        border-radius: 0;
+      }
+    }
+    &:checked + label:before {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpolyline fill='none' stroke='%230bd' stroke-width='3' points='2,7.3 7.3,12.7 18,2 '/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: 0 2px;
+    }
+  }
+  &__file {
+    //file送信
+    input[type="file"] {
+      display: none;
+    }
+    label {
+      background: $main;
+      color: white;
+      font-size: 1.3rem;
+      padding: 8px 10px;
+      border-radius: 4px;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      &:hover{
+        opacity: 0.7;
+        transition: 0.3s ease-out;
+      }
+      &:after {
+        content: "選択されていません";
+        color: $black;
+        font-size: 14px;
+        height: 20px;
+        line-height: 20px;
+        position: absolute;
+        right: -140px;
+        top: calc(50% - 10px);
+      }
+      &.changed:after {
+        content: "";
+      }
+    }
+    .filename {
+      font-size: 12px;
+    }
+  }
+}
+
+input[type="date"].form__txt {
+  width: 200px;
+}
+
+textarea.form__txt {
+  height: 100px;
+}
