@@ -89,8 +89,8 @@ const app = {
     new CleanWebpackPlugin(),
     new CopyPlugin([
       {
-        from: "./favicon.png",
-        to: "favicon.png",
+        from: `${__dirname}/public`,
+        to: `${__dirname}/dist`,
       },
     ]),
   ],
