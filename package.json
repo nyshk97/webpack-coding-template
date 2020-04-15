@@ -1,7 +1,8 @@
 {
-  "name": "webpack-test2",
+  "name": "webpack-coding-template",
   "version": "1.0.0",
-  "description": "",
+  "repository": "nyshk97",
+  "description": "This is my coding template with webpack",
   "main": "webpack.config.js",
   "scripts": {
     "start": "webpack-dev-server",
