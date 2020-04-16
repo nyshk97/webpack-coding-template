@@ -1,5 +1,7 @@
 import '../stylesheets/style.scss';
-// import './font-awesome'
-// import swiper from './swiper'
+
+// import './lib/jquery';
+// import './lib/font-awesome'
+// import swiper from './lib/swiper'
 
 // swiper()
