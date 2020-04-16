@@ -1,0 +1,17 @@
+extends ../_layout
+block locals
+  - let title = 'トップページ'
+block content
+  main.main
+    .container
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide 
+            img(src="http://placehold.jp/16/ddd/999/1000x300.png?text=Image1" alt="")
+          .swiper-slide 
+            img(src="http://placehold.jp/16/ddd/999/1000x300.png?text=Image2" alt="")
+          .swiper-slide 
+            img(src="http://placehold.jp/16/ddd/999/1000x300.png?text=Image3" alt="")
+        .swiper-pagination
+        .swiper-button-prev
+        .swiper-button-next
