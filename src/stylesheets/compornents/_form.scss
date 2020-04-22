@@ -3,24 +3,20 @@
   max-width: 600px;
   margin: auto;
   &__group {
-    //項目名とinput等の1つのかたまり
     margin-bottom: 16px;
     margin-bottom: 1.6rem;
-    label {
-      display: inline-block;
-      margin-bottom: 8px;
-    }
-    &.inline {
+    &.-inline {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      label {
+      .form__itemname {
         width: 150px;
         margin-right: 16px;
+        margin-bottom: 0;
       }
       @include sp {
         display: block;
-        label {
+        .form__itemname {
           display: block;
           width: 100%;
           margin-bottom: 4px;
@@ -37,13 +33,11 @@
       margin-bottom: 24px;
     }
   }
-  &__name {
-    //項目名
-    font-size: inherit;
-    display: block;
+  &__itemname {
+    display: inline-block;
+    margin-bottom: 8px;
   }
   &__txt {
-    //input[type="text"], input[type="textarea"]など
     border: 1px solid #ced4da;
     border-radius: 4px;
     color: #495057;
@@ -64,8 +58,11 @@
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     }
   }
+  &__content {
+    display: flex;
+    width: 100%;
+  }
   &__radio {
-    //radio button
     display: none;
     &:checked + label:after {
       content: "";
@@ -99,15 +96,16 @@
   &__check {
     display: none;
     & + label {
-      padding-left: 20px;
+      padding-left: 24px;
       position: relative;
       display: block;
+      margin-right: 10px;
       &:before {
         content: "";
         display: block;
         position: absolute;
         top: 3px;
-        left: -6px;
+        left: 0;
         width: 20px;
         height: 20px;
         border: 2px solid #999;
@@ -121,7 +119,6 @@
     }
   }
   &__file {
-    //file送信
     input[type="file"] {
       display: none;
     }
@@ -134,7 +131,8 @@
       display: inline-block;
       position: relative;
       cursor: pointer;
-      &:hover{
+      margin-right: 8px;
+      &:hover {
         opacity: 0.7;
         transition: 0.3s ease-out;
       }
@@ -156,10 +154,48 @@
       font-size: 12px;
     }
   }
+  &__select {
+    min-width: 120px;
+    position: relative;
+    border-radius: 4px;
+    background: $main;
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      width: 0;
+      height: 0;
+      padding: 0;
+      content: "";
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 10px solid #fff;
+      cursor: pointer;
+      pointer-events: none;
+    }
+    select {
+      font-size: 1.4rem;
+      width: 100%;
+      cursor: pointer;
+      text-overflow: ellipsis;
+      border: none;
+      outline: none;
+      background: transparent;
+      background-image: none;
+      box-shadow: none;
+      appearance: none;
+      padding: 6px 10px;
+      color: #fff;
+      &::-ms-expand {
+        display: none;
+      }
+    }
+  }
 }
 
 input[type="date"].form__txt {
-  width: 200px;
+  max-width: 200px;
 }
 
 textarea.form__txt {
