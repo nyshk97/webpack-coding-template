@@ -26,17 +26,17 @@ $ npm i
 
 ## Run development server
 ```
-$ npm start
+$ npm run start
 ```
 
 ## Build
 Output with the basic style
 ```
-$ npm build:dev
+$ npm run build:dev
 ```
 or Output with a single line
 ```
-$ npm build
+$ npm run build
 ```
 
 ## References
