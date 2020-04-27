@@ -1,6 +1,7 @@
 import "../stylesheets/style.scss";
+import "./lib/form";
 
-import "./lib/jquery";
+// import "./lib/jquery";
 
 // import './lib/font-awesome'
 
