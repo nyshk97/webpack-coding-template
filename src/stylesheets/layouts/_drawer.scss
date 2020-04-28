@@ -15,8 +15,8 @@
     right: 0;
     // ハンバーガーアイコンの中の線
     &.-parts,
-    &.-parts:before,
-    &.-parts:after {
+    &.-parts::before,
+    &.-parts::after {
       background-color: #000;
       display: block;
       width: 26px;
@@ -28,14 +28,17 @@
       bottom: 0;
       margin: auto;
     }
-    &.-parts:before,
-    &.-parts:after {
+
+    &.-parts::before,
+    &.-parts::after {
       content: " ";
     }
-    &.-parts:before {
+
+    &.-parts::before {
       top: 16px;
     }
-    &.-parts:after {
+
+    &.-parts::after {
       top: -16px;
     }
   }
@@ -54,7 +57,7 @@
 
   // ドロワーメニュー
   &__menu {
-    background: #ffffff;
+    background: #fff;
     color: #000;
     max-width: 100%;
     width: 320px;
@@ -69,9 +72,11 @@
   &__icon {
     z-index: 4;
   }
+
   &__menu {
     z-index: 3;
   }
+
   &__overlay {
     z-index: 2;
   }
@@ -83,12 +88,14 @@
       .drawer__icon.-parts {
         background: transparent;
       }
-      .drawer__icon.-parts:before {
+
+      .drawer__icon.-parts::before {
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
         top: 0;
       }
-      .drawer__icon.-parts:after {
+
+      .drawer__icon.-parts::after {
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
         top: 0;
@@ -106,13 +113,14 @@
   }
   // 動きをスムーズに
   &__icon.-parts,
-  &__icon.-parts:after,
-  &__icon.-parts:before,
+  &__icon.-parts::after,
+  &__icon.-parts::before,
   &__overlay,
   &__menu {
     -webkit-transition: all 0.7s;
     transition: all 0.7s;
   }
+
   @include sp {
     display: block;
   }

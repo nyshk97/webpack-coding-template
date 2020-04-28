@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const StylelintPlugin = require("stylelint-webpack-plugin");
 const globule = require("globule");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -85,6 +86,9 @@ const app = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "stylesheets/[name]-[hash].css",
+    }),
+    new StylelintPlugin({
+      fix: true,
     }),
     new CleanWebpackPlugin(),
     new CopyPlugin([
