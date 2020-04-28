@@ -37,7 +37,12 @@ const app = {
           {
             loader: "postcss-loader",
             options: {
-              plugins: [require("autoprefixer")],
+              plugins: [
+                require("autoprefixer"),
+                require("css-declaration-sorter")({
+                  order: "alphabetical",
+                }),
+              ],
             },
           },
           {
