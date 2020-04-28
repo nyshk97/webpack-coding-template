@@ -1,7 +1,7 @@
 .form {
-  line-height: 1.5;
   max-width: 600px;
   margin: auto;
+  line-height: 1.5;
 
   &__group {
     margin-bottom: 16px;
@@ -9,8 +9,8 @@
 
     &.-inline {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
 
       .form__itemname {
         width: 150px;
@@ -48,25 +48,25 @@
   }
 
   &__txt {
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    color: #495057;
     display: block;
+    width: 100%;
     height: 38px;
     height: calc(1.5em + 1.2rem + 2px);
     padding: 6px 12px;
     padding: 0.6rem 1.2rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    width: 100%;
     font-size: 1.6rem;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
     &::placeholder {
       color: $grey2;
     }
 
     &:focus {
-      outline: 0;
       border-color: #80bdff;
+      outline: 0;
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     }
   }
@@ -80,31 +80,31 @@
     display: none;
 
     &:checked + label::after {
-      content: "";
-      display: block;
       position: absolute;
       top: 6px;
       left: 5px;
+      display: block;
       width: 12px;
       height: 12px;
+      content: "";
       background: $main;
       border-radius: 50%;
     }
 
     & + label {
+      position: relative;
       display: inline-block;
       padding-left: 25px;
-      position: relative;
       margin-right: 15px;
 
       &::before {
-        content: "";
-        display: block;
         position: absolute;
         top: 2px;
         left: 1px;
+        display: block;
         width: 20px;
         height: 20px;
+        content: "";
         border: 1px solid #999;
         border-radius: 50%;
       }
@@ -115,19 +115,19 @@
     display: none;
 
     & + label {
-      padding-left: 24px;
       position: relative;
       display: block;
+      padding-left: 24px;
       margin-right: 10px;
 
       &::before {
-        content: "";
-        display: block;
         position: absolute;
         top: 3px;
         left: 0;
+        display: block;
         width: 20px;
         height: 20px;
+        content: "";
         border: 2px solid #999;
         border-radius: 0;
       }
@@ -146,15 +146,15 @@
     }
 
     label {
-      background: $main;
-      color: white;
-      font-size: 1.3rem;
-      padding: 8px 10px;
-      border-radius: 4px;
-      display: inline-block;
       position: relative;
-      cursor: pointer;
+      display: inline-block;
+      padding: 8px 10px;
       margin-right: 8px;
+      font-size: 1.3rem;
+      color: white;
+      cursor: pointer;
+      background: $main;
+      border-radius: 4px;
 
       &:hover {
         opacity: 0.7;
@@ -162,14 +162,14 @@
       }
 
       &::after {
-        content: "選択されていません";
-        color: $black;
-        font-size: 14px;
-        height: 20px;
-        line-height: 20px;
         position: absolute;
-        right: -140px;
         top: calc(50% - 10px);
+        right: -140px;
+        height: 20px;
+        font-size: 14px;
+        line-height: 20px;
+        color: $black;
+        content: "選択されていません";
       }
 
       &.changed::after {
@@ -183,40 +183,40 @@
   }
 
   &__select {
-    min-width: 120px;
     position: relative;
-    border-radius: 4px;
+    min-width: 120px;
     background: $main;
+    border-radius: 4px;
 
     &::before {
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
       right: 20px;
       width: 0;
       height: 0;
       padding: 0;
-      content: "";
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      border-top: 10px solid #fff;
-      cursor: pointer;
       pointer-events: none;
+      cursor: pointer;
+      content: "";
+      border-top: 10px solid #fff;
+      border-right: 6px solid transparent;
+      border-left: 6px solid transparent;
+      transform: translateY(-50%);
     }
 
     select {
-      font-size: 1.4rem;
       width: 100%;
-      cursor: pointer;
+      padding: 6px 10px;
+      font-size: 1.4rem;
+      color: #fff;
       text-overflow: ellipsis;
-      border: none;
-      outline: none;
+      cursor: pointer;
       background: transparent;
       background-image: none;
+      border: none;
+      outline: none;
       box-shadow: none;
       appearance: none;
-      padding: 6px 10px;
-      color: #fff;
 
       &::-ms-expand {
         display: none;

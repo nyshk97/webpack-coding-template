@@ -1,9 +1,9 @@
 .btn-outline {
   @extend %btn;
 
+  color: $grey1;
   background: transparent;
   border: solid 1px $grey1;
-  color: $grey1;
   box-shadow: none;
 
   &:hover {
