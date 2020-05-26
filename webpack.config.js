@@ -51,7 +51,7 @@ const app = {
         ],
       },
       {
-        test: /\.(png|jpg|jpeg)$/i,
+        test: /\.(png|jpg|jpeg|svg)$/i,
         use: [
           {
             loader: "file-loader",
